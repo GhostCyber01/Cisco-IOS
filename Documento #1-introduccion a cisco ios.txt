@@ -1,0 +1,25 @@
+cisco ios : nombre del sistema operativo
+
+modos
+1. usuarios 
+	simbolo presentacion ( > )
+           commando: N/A
+2.privilegiado 
+	simbolo presentacion #
+           comando: Enable
+3.configuracion global (config)#
+           comando: configure terminal
+	   Abreviatura: conf t
+4. configuracion de interfas (config-if)#
+	   comando: interface nombre-interfaz
+	   Abreviatura: int nombre abreviado
+5.configuracion de lineas (config-line)
+	Comando: line nombre-linea id-linea
+abreviatura: li nombre-abreviado id-lineqa
+
+note1: cada modo de operacion, tiene un grupo de comandos que solo se pueden
+ejecutar dentro de dicho modo.
+
+nota2: paera salir de un modo y volver al modo anterior, usamos el comando "exit"
+y para salir de un  modo e ir directamente al modo privilegiado, usamos el comando
+"end"

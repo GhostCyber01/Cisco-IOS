@@ -1,0 +1,76 @@
+Red Dapiato SD
+
+direccion ipv4 de red = 198.0.2.0
+	prefijo de red = /27
+	mascara de subred = 255.255.255.224
+cantidad de dirreciones ipv4 = 32
+        cantidad de equipos = 30
+	direccion ipv4 del router = 198.0.2.1
+	direccion ipv4 del switch1 = 198.0.2.2
+	direccion ipv4 del switch2 = 198.0.2.3
+	direccion ipv4 del broadcast = 198.0.2.31
+	direccion ipv4 disponibles = 30
+	direccion ipv2 soporte = 198.0.2.5
+	direccion ipv4 del server = 198.0.2.4
+	coordinadora = 198.0.2.6
+	secretaria = 198.0.2.7
+	director = 198.0.2.8
+	direcciones ipv4 por dhcp = desde 198.0.2.9 hasta la  198.0.2.30
+
+vlsm = variable lenght subnet mask(mascara de subred de longitud variable )
+
+paso 1: identificar las propiedades de la direccion ipv4 por defecto
+
+198.0.2.0 /24 (255.255.255.0) = 256 direcciones ipv4
+
+paso 2: identificar la necesidad de la red actual 
+
+equipos necesarios: 30
+
+paso 3. modificar la mascara de subred, para ajustarla a las necesidades
+reales
+
+	1.tomar la porcion de la mascara de subred que se puede modificar
+		.0
+	2.convertir la porcion de la mascara de subred en binario 
+		000000000000
+	3.encender los bits necesaris hasta que la mascara se ajuste al
+	  requerimiento 
+		111000000000
+	4. convertir la porcion de la mascara de subred modificada de binario a decimal
+		224
+	5. vuelvo a esamblar la nueva mascra de subred 
+		255.255.255.224
+		/27
+
+
+128 64 32 168 4 2 1
+
+ 1   1  1  1 1 1 1 1 = 256
+ 0   0  0  0 0 0 0 0 = 0
+ 1   1  1 0  0 0 0 0 = 64
+
+
+
+el prefijo de red es 24 por que 255 rs el equivalente a 8 unos y 8x3 es 
+igual a 24
+
+
+255 = 1111111
+255 = 1111111
+0   = 0000000
+
+
+red #1 (198.0.2.0 - 198.0.0.31)
+
+red #2 (198.0.2.32 - 198.0.0.63)
+
+red #1 (198.0.2.64 - 198.0.0.95)
+
+red #1 (198.0.2.96 - 198.0.0.127)
+
+
+
+
+
+ 

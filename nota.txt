@@ -1,0 +1,27 @@
+en
+conf t
+no ip domain-lookup
+banner motd #si entras a este quipo sin permiso, caeras preso feamente#
+hostname SD-Dapiato-R1
+enable secret klk001#
+username hls privilege 15 secret hola123@
+ip domain-name dapiato.com
+crypto key generate rsa
+1024
+ip ssh time-out *60*
+ip ssh version 2
+ip ssh authentication-retries 3
+
+line con 0
+password NBA123*
+*logging synchronous*
+login local
+
+line vty 0 15
+login local
+*logging synchronous*
+transport input *ssh*
+
+end
+copy running-config startup-config
+reload

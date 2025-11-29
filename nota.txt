@@ -21,7 +21,7 @@ line vty 0 15
 login local
 *logging synchronous*
 transport input *ssh*
-
+transport input telnet
 end
 copy running-config startup-config
 reload
